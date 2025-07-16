@@ -53,6 +53,11 @@ export function HeroWithMockup({
       <div className="relative mx-auto max-w-[1280px] flex flex-col gap-12 lg:gap-24">
         <div className="relative z-10 flex flex-col items-center gap-6 pt-8 md:pt-16 text-center lg:gap-12">
           {/* Heading */}
+          <img
+            src="/images/3d_dental.png"
+            alt="Smiling tooth illustration"
+            className="absolute inset-0 w-full h-full object-contain opacity-50 dark:opacity-30 z-0 animate-float-slow"
+          />
           <h1
             className={cn(
               "inline-block animate-appear",

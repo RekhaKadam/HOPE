@@ -44,6 +44,7 @@ module.exports = {
       animation: {
         appear: "appear 0.5s ease-out forwards",
         "appear-zoom": "appear-zoom 0.8s ease-out forwards",
+        marquee: "marquee var(--duration, 40s) linear infinite", // ✅ Marquee animation
       },
       keyframes: {
         appear: {
@@ -53,6 +54,10 @@ module.exports = {
         "appear-zoom": {
           "0%": { opacity: "0", transform: "scale(0.98)" },
           "100%": { opacity: "1", transform: "scale(1)" },
+        },
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
         },
       },
       borderRadius: {

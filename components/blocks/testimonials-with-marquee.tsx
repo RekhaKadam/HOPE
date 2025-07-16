@@ -14,7 +14,7 @@ interface TestimonialsSectionProps {
 
 export function TestimonialsSection({ title, description, testimonials, className }: TestimonialsSectionProps) {
   return (
-    <section className={cn("bg-background text-foreground", "py-12 sm:py-24 md:py-32 px-0", className)}>
+    <section className={cn("dark:bg-slate-900 text-foreground", "py-12 sm:py-24 md:py-32 px-0", className)}>
       <div className="mx-auto flex max-w-container flex-col items-center gap-4 text-center sm:gap-16">
         <div className="flex flex-col items-center gap-4 px-4 sm:gap-8">
           <h2 className="max-w-[720px] text-3xl font-semibold leading-tight sm:text-5xl sm:leading-tight">{title}</h2>

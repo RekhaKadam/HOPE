@@ -13,6 +13,8 @@ import { Environment, OrbitControls, Sphere, Box, Cylinder, Cone } from "@react-
 import type * as THREE from "three"
 import { TestimonialsSection } from "@/components/blocks/testimonials-with-marquee" // Import the new testimonials section
 import {  MessageSquare } from "lucide-react" 
+import { CarouselDemo } from "@/components/ui/carousel-demo" // Import the new CarouselDemo
+
 // Import the new HeroWithMockup component
 import { HeroWithMockup } from "@/components/ui/hero-with-mockup"
 import { PricingCard } from "@/components/ui/dark-gradient-pricing" // Import the new PricingCard component
@@ -309,7 +311,7 @@ function HopeBot() {
 }
 
 export default function HopeFullLandingPage() {
-  const [isDark, setIsDark] = useState(false) // Default to light mode
+  const [isDark, setIsDark] = useState(true) // Default to light mode
 
   const [formData, setFormData] = useState({
     name: "",
@@ -433,90 +435,21 @@ export default function HopeFullLandingPage() {
           }}
         />
 
-        {/* Use Cases Section (now GlareCard) */}
-        <section id="use-cases" className="py-20 bg-white text-gray-900">
-          {" "}
-          {/* Changed background and text color */}
+       {/* Use Cases Section (now Carousel) */}
+        <section id="use-cases" className="py-20 bg-white text-gray-900 dark:bg-slate-900 dark:text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4">Use Cases</h2>
-              <p className="text-lg text-gray-600">Discover how H.O.P.E can transform your practice</p>{" "}
-              {/* Adjusted text color */}
+              <p className="text-lg text-gray-600 dark:text-gray-400">
+                Discover how H.O.P.E can transform your practice
+              </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
-              {/* Dental Clinics */}
-              <GlareCard className="flex flex-col items-center justify-center p-8 text-center bg-white">
-                {" "}
-                {/* Changed bg-slate-950 to bg-white */}
-                <svg
-                  width="66"
-                  height="65"
-                  viewBox="0 0 66 65"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-14 w-14 text-blue-600 mb-4"
-                >
-                  <path
-                    d="M8 8.05571C8 8.05571 54.9009 18.1782 57.8687 30.062C60.8365 41.9458 9.05432 57.4696 9.05432 57.4696"
-                    stroke="currentColor"
-                    strokeWidth="15"
-                    strokeMiterlimit="3.86874"
-                    strokeLinecap="round"
-                  />
-                </svg>
-                <h3 className="text-2xl font-bold text-blue-600 mb-2">Dental Clinics</h3> {/* Adjusted text color */}
-                <p className="text-gray-700">Streamline patient screening and maintain comprehensive records</p>{" "}
-                {/* Adjusted text color */}
-              </GlareCard>
-
-              {/* Research Institutions */}
-              <GlareCard className="flex flex-col items-center justify-center p-8 text-center bg-white">
-                {" "}
-                {/* Changed bg-slate-950 to bg-white */}
-                <img
-                  className="h-full w-full absolute inset-0 object-cover opacity-50"
-                  src="/images/dentalcolor.png"
-                  alt="Dental professionals working on a tooth"
-                />
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-bold text-teal-600 mb-2">Research Institutions</h3>{" "}
-                  {/* Adjusted text color */}
-                  <p className="text-gray-700">Analyze patterns and contribute to oral health research</p>{" "}
-                  {/* Adjusted text color */}
-                </div>
-              </GlareCard>
-
-              {/* Healthcare Centers */}
-              <GlareCard className="flex flex-col items-start justify-end py-8 px-6 text-left bg-white">
-                {" "}
-                {/* Changed bg-slate-950 to bg-white */}
-                <p className="font-bold text-green-600 text-lg mb-2">Healthcare Centers</p> {/* Adjusted text color */}
-                <p className="font-normal text-base text-gray-700">
-                  {" "}
-                  {/* Adjusted text color */}
-                  Integrate oral health screening into general health checkups.
-                </p>
-              </GlareCard>
-
-              {/* Community Health */}
-              <GlareCard className="flex flex-col items-center justify-center p-8 text-center bg-white">
-                {" "}
-                {/* Changed bg-slate-950 to bg-white */}
-                <h3 className="text-2xl font-bold text-purple-600 mb-2">Community Health</h3>{" "}
-                {/* Adjusted text color */}
-                <p className="text-gray-700">
-                  {" "}
-                  {/* Adjusted text color */}
-                  Empower local communities with accessible health education and screening programs.
-                </p>
-              </GlareCard>
-            </div>
+            <CarouselDemo />
           </div>
         </section>
 
         {/* New Pricing Section */}
-        <section id="pricing" className="relative overflow-hidden bg-background text-foreground py-20">
+        <section id="pricing" className="relative overflow-hidden dark:bg-slate-900 text-foreground py-20">
           <div className="relative z-10 mx-auto max-w-5xl px-4 md:px-8">
             <div className="mb-12 space-y-3">
               <h2 className="text-center text-3xl font-semibold leading-tight sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
@@ -575,7 +508,7 @@ export default function HopeFullLandingPage() {
 
         {/* About Us Section */}
       {/* Testimonials Section */}
-        <section id="testimonials">
+        <section id="testimonials" >
           <TestimonialsSection
             title="About Us"
             description="Discover how we're transforming digital healthcare"
